@@ -5,12 +5,6 @@ const LOCATORS = {
   TestCases_PAGE: {
     TestCases: '.nav > li > a[href="/test_cases"]',
   },
-  TestCase_PAGE: {
-    TestCase: '.nav > li > a[href="/test_cases"]',
-  },
- TestCases_PAGE: {
-   TestCases:'.nav > li > a[href="/test_cases"]',
-  },
   TestCases_Text: {
     TextTitle: ".text-center>b",
   },
@@ -19,11 +13,15 @@ const LOCATORS = {
     HEADER: "#header",
     PRODUCTS_BTN: '[href="/products"]',
     CART_BUTTON: 'header#header li:nth-child(3) > a',
+    LOGOUT_BTN: 'header#header li:nth-child(4) > a',
     SUBSCRIPTION_TEXT: ".single-widget",
     INPUT_BOX_FOR_EMAIL: "#susbscribe_email",
     ARROW_BTN: "#subscribe",
     SUCCESS_SUBS_MSG_: ".alert-success.alert",
     CART_BTN: "a[href='/view_cart']",
+    CATEGORY: " .left-sidebar>h2",
+    WOMEN: ' [data-parent="#accordian"]',
+    DRESS: '[href="/category_products/1"]'
   },
   LOGIN_PAGE: {
     SIGNUP_NAME: "signup-name",
@@ -63,6 +61,11 @@ const LOCATORS = {
     ACCOUNT_CREATED: "account-created",
     CONTINUE_BTN: "continue-button",
   },
+  New_User_Signup: {
+    NAME:"signup-name",
+    EMAIL_ADDRESS:"signup-email",
+    SINGUP_BOTUN:"signup-button",
+  },
   DELETE_PAGE: {
     DELETE_ACCOUNT_BTN: "li:nth-child(5) > a",
     ACCOUNT_DELETED_TEXT: "account-deleted",
@@ -82,11 +85,11 @@ const LOCATORS = {
     ALL_PRODUCTS_TEXT: "h2.title",
     SEARCH_ITEM: "#submit_search",
     SEARCHED_PRODUCTS_TEXT: "h2.title.text-center",
-    FIRST_PRODUCT_NAME:"div.col-sm-7 > div > h2",
-    FIRST_PRODUCT_PRICE:"span > span",
-    FIRST_PRODUCT_AVAILABILITY:"p:nth-child(6) > b",
-    FIRST_PRODUCT_CONDITION:"p:nth-child(7)",
-    FIRST_PRODUCT_BRAND:"p:nth-child(8) > b"
+    FIRST_PRODUCT_NAME: "div.col-sm-7 > div > h2",
+    FIRST_PRODUCT_PRICE: "span > span",
+    FIRST_PRODUCT_AVAILABILITY: "p:nth-child(6) > b",
+    FIRST_PRODUCT_CONDITION: "p:nth-child(7)",
+    FIRST_PRODUCT_BRAND: "p:nth-child(8) > b"
   },
 
   CART_PAGE: {
@@ -152,6 +155,7 @@ const LOCATORS = {
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
     WIEW_RECOMMENDCART: "#cartModal u",
     CART_PRODUCT: "#product-4 h4 > a",
+    PROCEED_TO_CHECKOUT_BTN: '.col-sm-6 .btn'
   },
   CHECKOUT_PAGE: {
     DELIVERY_ADDRESS: {
@@ -182,31 +186,34 @@ const LOCATORS = {
     brandHMLink: '[href="/brand_products/H&M"]',
     VerifyBrandHM: '[href="/product_details/6"]',
   },
-  CONTACT_US_PAGE:{
-    CONTACT_US_BTN:'a[href="/contact_us"]',
-    GET_IN_TUCH_TEXT:"h2.title.text-center:nth-child(2)",
+  CONTACT_US_PAGE: {
+    CONTACT_US_BTN: 'a[href="/contact_us"]',
+    GET_IN_TUCH_TEXT: "h2.title.text-center:nth-child(2)",
     NAME: "[data-qa='name']",
     EMAIL: "[data-qa='email']",
     SUBJECT: "[data-qa='subject']",
     MESSAGE: "[data-qa='message']",
     UPLOAD_FILE: '[name="upload_file"]',
     SUBMIT_BTN: '[name="submit"]',
-    SUCCESS : '[class="status alert alert-success"]',
-    HOME :'[class="fa fa-angle-double-left"]',
-    HOMEVISIBLE :'[class="fa fa-home"]'
+    SUCCESS: '[class="status alert alert-success"]',
+    HOME: '[class="fa fa-angle-double-left"]',
+    HOMEVISIBLE: '[class="fa fa-home"]'
   },
-  PAGE_SCROLL:{
+  PAGE_SCROLL: {
     SCROLL: '.single-widget h2',
-    HOMETEXT:'#slider-carousel > div > div:nth-child(3) > div:nth-child(1) > h2',
-    ARROW_BTN:'[class="fa fa-angle-up"]'
-  },    
+    HOMETEXT: '#slider-carousel > div > div:nth-child(3) > div:nth-child(1) > h2',
+    ARROW_BTN: '[class="fa fa-angle-up"]'
+  },
   PRODUCT_QUANTITY: {
     VIEW_PRODUCT: "[href='/product_details/1']",
     ADD_TO_CART_BUTTON: "[type=button]",
     VIEW_CART_BUTTON: "[href='/view_cart']>u",
     QUANTITY_DETAIL: "#product-1 button",
-  },    
+  },
+  CATEGORY: {
+    PRODUCTS: "div .breadcrumbs .active",
+    JEANS: '[href="/category_products/6"]',
+  }
 
-};
-
+}
 export default LOCATORS;
