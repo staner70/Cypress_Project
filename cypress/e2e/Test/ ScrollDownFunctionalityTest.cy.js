@@ -13,17 +13,17 @@ describe('Scroll Down Functionality Test', () => {
     it('Kullanici subscription butonunu gorebilmeli', () => {
         homePage.visitPage() 
         cy.title().should('eq', user.home.title) 
-        cy.getBySel(LOCATORS.PAGE_SCROLL.SCROLL).scrollIntoView()
-        cy.getBySel(LOCATORS.PAGE_SCROLL.SCROLL).should('be.visible')
-        cy.getBySel(LOCATORS.PAGE_SCROLL.HOMETEXT).scrollIntoView().should('be.visible')
+        cy.getBySel(LOCATORS.HOME_PAGE.PAGE_SCROLL.SCROLL).scrollIntoView()
+        cy.getBySel(LOCATORS.HOME_PAGE.PAGE_SCROLL.SCROLL).should('be.visible')
+        cy.getBySel(LOCATORS.HOME_PAGE.PAGE_SCROLL.HOME_TEXT).scrollIntoView().should('be.visible')
     });
     it('Kullanici arrow butonu kullanarak sayfayi asayi yukari yapabilmeli', () => {
         homePage.visitPage() 
         cy.title().should('eq', user.home.title) 
-        cy.getBySel(LOCATORS.PAGE_SCROLL.SCROLL).trigger('mousedown').should('be.visible')
+        cy.getBySel(LOCATORS.HOME_PAGE.PAGE_SCROLL.SCROLL).trigger('mousedown').should('be.visible')
         cy.wait(2000)
-        cy.getBySel(LOCATORS.PAGE_SCROLL.ARROW_BTN).click().trigger('mouseup','topRight')
-        cy.getBySel(LOCATORS.PAGE_SCROLL.HOMETEXT).should('be.visible')
+        cy.getBySel(LOCATORS.HOME_PAGE.PAGE_SCROLL.ARROW_BTN).click().trigger('mouseup','topRight')
+        cy.getBySel(LOCATORS.HOME_PAGE.PAGE_SCROLL.HOME_TEXT).should('be.visible')
     });
     });
     

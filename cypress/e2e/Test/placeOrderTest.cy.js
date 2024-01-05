@@ -30,7 +30,7 @@ describe("Place Order", () => {
         cy.title().should("eq", user.home.title);
         cy.get(LOCATORS.ADD_TO_CART.PRODUCT_1).contains("Add to cart").should("be.visible");
         cy.get(LOCATORS.ADD_TO_CART.PRODUCT_1).contains("Add to cart").click();
-        cy.get(LOCATORS.ADD_TO_CART.WIEW_RECOMMENDCART).contains("View Cart").click();
+        cy.get(LOCATORS.ADD_TO_CART.VIEW_RECOMMEND_CART).contains("View Cart").click();
         cartPage.getShoppingCartText().should("be.visible");
         cartPage.clickToCheckoutBtn();
         cartPage.clickToModalRegisterLoginBtn();

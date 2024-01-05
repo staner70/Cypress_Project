@@ -13,6 +13,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   videoCompression: true,
   screenshot: true,
+  watchForFileChanges: false,
   e2e: {
         baseUrl: 'https://automationexercise.com/',
     },
