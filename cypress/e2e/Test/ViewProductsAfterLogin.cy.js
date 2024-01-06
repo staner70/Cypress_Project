@@ -21,7 +21,7 @@ describe("User Can See Added Products After Login",() => {
         cy.getBySel(LOCATORS.PRODUCT_PAGE.SEARCHED_PRODUCTS_TEXT).should('be.visible')
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2).contains('Add to cart').should("be.visible")
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2).contains('Add to cart').click().wait(2000)
-        cy.getBySel(LOCATORS.ADD_TO_CART.WIEW_CART).click()
+        cy.getBySel(LOCATORS.ADD_TO_CART.VIEW_CART).click()
         cy.getBySel(LOCATORS.CART_PAGE.CART_DESCRIPTION).should('contain','Men Tshirt')
         cy.getBySel(LOCATORS.CART_PAGE.LOGIN_BTN_CART_PAGE).click()
         lgnPage.userLogin(user)
